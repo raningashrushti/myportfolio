@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1 Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #fcff5f, #78ac35);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: center;
+        }
+        .assignment iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            margin-top: 10px;
+            display: none;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Module 1: Web Development Basics</h2>
+        
+        <div>
+            <p><strong>Day 1: Basics of HTML</strong> - Introduction to HTML structure, elements, and tags.</p>
+            <button onclick="showAssignment('assignment1')">View Assignment</button>
+            <iframe id="assignment1" src="./assignment1.html">
+                
+            </iframe>
+           
+        </div>
+        
+        <div>
+            <p><strong>Day 2: More HTML Tags</strong> - Learning about lists, images, and links.</p>
+            <button onclick="showAssignment('assignment2')">View Assignment</button>
+            <iframe id="assignment2" src=./assignment2.html></iframe>
+        </div>
+        
+        <div>
+            <p><strong>Day 3: Tables and Forms</strong> - Creating structured tables and interactive forms.</p>
+            <button onclick="showAssignment('assignment3')">View Assignment</button>
+            <iframe id="assignment3" src=./table.html></iframe>
+        </div>
+        
+        <div>
+            <p><strong>Day 4 & 5: CSS</strong> - Styling HTML pages with colors, fonts, and layout.</p>
+            <button onclick="showAssignment('assignment4')">View Assignment</button>
+            <iframe id="assignment4" src=./flexbox.html></iframe>
+        </div>
+        
+        <div>
+            <p><strong>Day 6: JavaScript Basics</strong> - Introduction to JavaScript and interactivity.</p>
+            <button onclick="showAssignment('assignment5')">View Assignment</button>
+            <iframe id="assignment5" src="assignment5.html"></iframe>
+        </div>
+    </div>
+    
+    <script>
+        function showAssignment(id) {
+            var iframes = document.querySelectorAll("iframe");
+            iframes.forEach(frame => {
+                if (frame.id === id) {
+                    frame.style.display = frame.style.display === "block" ? "none" : "block";
+                } else {
+                    frame.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
